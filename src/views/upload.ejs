@@ -1,0 +1,192 @@
+
+    <%- include("partials/head.ejs") %>
+    
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/darkly.css">
+
+<body>
+    <%- include ("partials/navigation") %>
+
+    <div class="container">
+        
+        <h1 class="mb-4">Upload New Client</h1>
+
+        <table class="table table-borderedx table-responsive table-sm">
+            <tbody>
+                <tr>
+                    <!-- <td>
+                        <img src="/K9_D_Chart.jpg" class="img-fluid rounded-start" alt="..." style="width: 40rem; height: 40rem;">
+                    </td> -->
+                    <td>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        
+                                        <form action="/upload" method="POST" enctype="multipart/form-data">
+
+                                            <h2 class="mb-4">Kin Information</h2>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Kin Name</span>
+                                                <input type="text" 
+                                                    id="kin_name"
+                                                    class="form-control" 
+                                                    name="kin_name"
+                                                >
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Phone Number</span>
+                                                <input type="text" 
+                                                    id="phone"
+                                                    class="form-control" 
+                                                    name="phone"
+                                                >
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Email</span>
+                                                <input type="text" 
+                                                    id="email"
+                                                    class="form-control" 
+                                                    name="email"
+                                                >
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">How know the program?</span>
+                                                <input type="text" 
+                                                    id="how"
+                                                    class="form-control" 
+                                                    name="how"
+                                                >
+                                            </div>
+
+                                            <h2 class="mb-4">Pet Information</h2>
+
+                                            <div class="card mb-3" style="background-color: #483D8B;">
+                                                <div class="card-body">
+                                                    <p class="card-text">Select a picture for your hairy friend's profile.</p>
+                                                    <div class="input-group mb-3">
+                                                        <input type="file" name="image" class="form-control" id="inputGroupFile02">
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Pet Name</span>
+                                                <input type="text" 
+                                                    id="title"
+                                                    class="form-control" 
+                                                    name="title"
+                                                >
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Breed</span>
+                                                <input type="text" 
+                                                    id="breed"
+                                                    class="form-control" 
+                                                    name="breed" 
+                                                >
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Age</span>
+                                                <input type="text" 
+                                                    id="age"
+                                                    class="form-control" 
+                                                    name="age" 
+                                                >
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Gender</span>
+                                                <input type="text" 
+                                                    id="gender"
+                                                    class="form-control" 
+                                                    name="gender" 
+                                                >
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Diet</span>
+                                                <input type="text" 
+                                                    id="diet"
+                                                    class="form-control" 
+                                                    name="diet" 
+                                                >
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Health Condition</span>
+                                                <input type="text" 
+                                                    id="health"
+                                                    class="form-control" 
+                                                    name="health" 
+                                                >
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Prev. A.Cleaning</span>
+                                                <input type="text" 
+                                                    id="withanest"
+                                                    class="form-control" 
+                                                    name="withanest" 
+                                                >
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Prev. N.A.Cleaning</span>
+                                                <input type="text" 
+                                                    id="noanest"
+                                                    class="form-control" 
+                                                    name="noanest" 
+                                                >
+                                            </div>
+                
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text">Node ID</span>
+                                                <input type="text" 
+                                                    id="precio"
+                                                    class="form-control" 
+                                                    name="precio" 
+                                                    placeholder="precio"
+                                                    value=0
+                                                    style="background-color:#696969"
+                                                >
+                                            </div>
+                
+                                            <div class="d-grid gap-2">
+                                                <button class="btn btn-primary" type="submit">Upload new hairy</button>
+                                            </div>
+                
+                
+                                        </form>
+
+                                    </div>
+                                </div>
+                
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- <tr>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        4
+                    </td>
+                </tr> -->
+
+            </tbody>
+        </table>
+        
+    </div>
+
+</body>
+<%- include ("partials/footer") %>
+</html>

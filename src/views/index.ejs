@@ -1,0 +1,42 @@
+
+
+<%- include("partials/head.ejs") %> 
+
+<link rel="stylesheet" href="/index.css">
+<link rel="stylesheet" href="/darkly.css">
+
+<body>
+
+    <%- include ("partials/navigation") %> 
+
+    <div class="main"> 
+        
+        <h1 class="mb-4">Clients</h1>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <% imagesMirelleDog.forEach(function (image) { %>
+                    
+                    <% if (image.precio == 0) { %> 
+                        
+                        <div class="card border-primary animate__animated animate__rubberBand p-1 m-2" style="max-width: 12rem;">
+                            <div class="card-header"><%= image.title %>
+                                <div><a href="/image/<%= image._id %>/delete">Delete</a></div>
+                            </div>
+                            <img src="<%= image.path %>" class="img-fluid rounded-start" alt="..." style="width: 12rem; height: 12rem;">
+                            <a href="/client/<%= image._id %>" class="btn btn-success d-md-block mb-1 mt-auto">See Profile</a>
+                        </div>
+
+                    <% } %>
+
+            <% }) %>
+
+        </div>
+
+    </div>
+
+</body>
+
+<%- include ("partials/footer") %>
+
+</html>
